@@ -18,6 +18,7 @@ class Human: Moveable {
 }
 
 class Dog: Moveable, Equatable {
+    
     var speed: Int
     
     func move() {
@@ -38,12 +39,14 @@ func slide(slider: Moveable) {
 }
 
 let human = Human(speed: 10)
+let dog = Dog(speed: 5)
 slide(slider: human)
+slide(slider: dog)
 
 var moveables: [Moveable] = [Human(speed: 10), Dog(speed: 5)]
 
 for index in 0..<moveables.count {
-    moveables[index].speed = 15
+    moveables[index].move()
 }
 
 let a = Dog(speed: 10)
