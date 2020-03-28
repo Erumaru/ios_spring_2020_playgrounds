@@ -12,7 +12,7 @@ func someFunc() -> () -> Int {
     return closure
 }
 
-let someFuncObject = someFunc()
+let someFuncObject: () -> Int = someFunc()
 
 print(someFuncObject())
 print(someFuncObject())
